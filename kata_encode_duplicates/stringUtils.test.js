@@ -1,13 +1,13 @@
-const moreThanOnceOccurrence = require('./stringUtils');
+const moreThanOne = require('./stringUtils');
 
 test('moreThanOnceOccurrence function exists', () => {
-    expect(typeof moreThanOnceOccurrence).toEqual('function');
+    expect(typeof moreThanOne).toEqual('function');
 });
 
 test('character "a" occurs more than once in "banana"', () => {
-    expect(moreThanOnceOccurrence('banana', 'a')).toBeTruthy();
+    expect(moreThanOne('a', 'banana')).toBeTruthy();
 });
 
 test('character "b" does not occur more than once in "banana"', () => {
-    expect(moreThanOnceOccurrence('banana', 'b')).toBeFalsy();
+    expect(moreThanOne('b', 'banana')).toBeFalsy();
 });

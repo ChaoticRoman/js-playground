@@ -1,9 +1,16 @@
-function moreThanOnceOccurrence(str, char) {
-    let count = 0;
-    for(let i = 0; i < str.length; i++) {
-        if(str[i] === char) count++;
+function moreThanOne(letter, word){
+  let found = false;
+  for (let i = 0; i < word.length; i++){
+    if (letter === word[i]) {
+      if (!found) {
+        found = true;
+      }
+      else {
+        return true;
+      }
     }
-    return count > 1;
+  }
+  return false;
 }
 
-module.exports = moreThanOnceOccurrence;
+module.exports = moreThanOne;
